@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GradeService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mock-api</a> &gt; <a href="index.source.html" class="el_package">com.example.mockapi.service</a> &gt; <span class="el_source">GradeService.java</span></div><h1>GradeService.java</h1><pre class="source lang-java linenums">package com.example.mockapi.service;
+
+import com.example.mockapi.model.ApiResponse;
+import com.example.mockapi.model.GradeData;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * Service class responsible for retrieving grade data
+ * from a mock API endpoint using RestTemplate.
+ */
+@Service
+public class GradeService {
+
+	  private final RestTemplate restTemplate;
+	  private final String mockApiUrl;
+
+
+    /**
+     * Constructs a new GradeService with the provided RestTemplate and mock API URL.
+     *
+     * @param restTemplate the RestTemplate used for making HTTP requests
+     * @param mockApiUrl   the URL of the mock API endpoint
+     */
+<span class="fc" id="L27">    public GradeService(RestTemplate restTemplate, String mockApiUrl) {</span>
+<span class="fc" id="L28">        this.restTemplate = restTemplate;</span>
+<span class="fc" id="L29">        this.mockApiUrl = mockApiUrl;</span>
+<span class="fc" id="L30">    }</span>
+
+    /**
+     * Fetches grade data from the mock API endpoint.
+     *
+     * @return an ApiResponse containing the grade data if successful,
+     *         a message indicating no data if the response body is null,
+     *         or an error message if the API call fails.
+     */
+    public ApiResponse&lt;GradeData&gt; getGradeData() {
+        try {
+<span class="fc" id="L41">            ResponseEntity&lt;GradeData&gt; mockResponse = restTemplate.getForEntity(mockApiUrl, GradeData.class);</span>
+
+<span class="fc bfc" id="L43" title="All 4 branches covered.">            if (mockResponse.getStatusCode() == HttpStatus.OK &amp;&amp; mockResponse.getBody() != null) {</span>
+<span class="fc" id="L44">                return new ApiResponse&lt;&gt;(200, &quot;Grade retrieved successfully&quot;, mockResponse.getBody());</span>
+            } else {
+<span class="fc" id="L46">                return new ApiResponse&lt;&gt;(mockResponse.getStatusCode().value(), &quot;No grade data found&quot;, null);</span>
+            }
+<span class="fc" id="L48">        } catch (Exception e) {</span>
+<span class="fc" id="L49">            return new ApiResponse&lt;&gt;(500, &quot;Failed to fetch grade data: &quot; + e.getMessage(), null);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

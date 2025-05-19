@@ -1,0 +1,8 @@
+com\example\mockapi\controller\GradeControllerIntegrationTest.class
+com\example\mockapi\model\ApiResponseTest.class
+com\example\mockapi\service\GradeServiceTest.class
+com\example\mockapi\model\GradeDataTest.class
+com\example\mockapi\config\AppConfigTest.class
+com\example\mockapi\MockApiApplicationTest.class
+com\example\mockapi\controller\GradeControllerTest.class
+com\example\mockapi\controller\MockApiControllerTest.class

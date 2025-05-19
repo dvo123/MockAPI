@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+mock-api,com.example.mockapi.model,GradeData,0,59,0,0,0,25,0,17,0,17
+mock-api,com.example.mockapi.model,ApiResponse,0,36,0,0,0,16,0,8,0,8
+mock-api,com.example.mockapi.service,GradeService,0,53,0,4,0,10,0,4,0,2
+mock-api,com.example.mockapi.config,AppConfig,0,12,0,0,0,4,0,3,0,3
+mock-api,com.example.mockapi,MockApiApplication,0,8,0,0,0,3,0,2,0,2
+mock-api,com.example.mockapi.controller,MockApiController,0,26,0,2,0,6,0,4,0,3
+mock-api,com.example.mockapi.controller,GradeController,0,10,0,0,0,4,0,2,0,2

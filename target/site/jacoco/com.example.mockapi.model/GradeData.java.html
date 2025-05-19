@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GradeData.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mock-api</a> &gt; <a href="index.source.html" class="el_package">com.example.mockapi.model</a> &gt; <span class="el_source">GradeData.java</span></div><h1>GradeData.java</h1><pre class="source lang-java linenums">package com.example.mockapi.model;
+
+/**
+ * Model representing grade information received from or sent to the mock API.
+ */
+<span class="fc" id="L6">public class GradeData {</span>
+
+    private int grade;
+    private String grade_expected;
+    private String grade_msg;
+    private int obj_id;
+    private int mark_flag;
+    private String grade_id;
+    private int workspace_id;
+    private int highlight;
+
+    /**
+     * Gets the grade value.
+     *
+     * @return the grade
+     */
+    public int getGrade() {
+<span class="fc" id="L23">        return grade;</span>
+    }
+
+    /**
+     * Sets the grade value.
+     *
+     * @param grade the grade to set
+     */
+    public void setGrade(int grade) {
+<span class="fc" id="L32">        this.grade = grade;</span>
+<span class="fc" id="L33">    }</span>
+
+    /**
+     * Gets the expected grade description.
+     *
+     * @return expected grade
+     */
+    public String getGrade_expected() {
+<span class="fc" id="L41">        return grade_expected;</span>
+    }
+
+    /**
+     * Sets the expected grade description.
+     *
+     * @param grade_expected expected grade
+     */
+    public void setGrade_expected(String grade_expected) {
+<span class="fc" id="L50">        this.grade_expected = grade_expected;</span>
+<span class="fc" id="L51">    }</span>
+
+    /**
+     * Gets the grade message.
+     *
+     * @return grade message
+     */
+    public String getGrade_msg() {
+<span class="fc" id="L59">        return grade_msg;</span>
+    }
+
+    /**
+     * Sets the grade message.
+     *
+     * @param grade_msg grade message
+     */
+    public void setGrade_msg(String grade_msg) {
+<span class="fc" id="L68">        this.grade_msg = grade_msg;</span>
+<span class="fc" id="L69">    }</span>
+
+    /**
+     * Gets the object ID.
+     *
+     * @return object ID
+     */
+    public int getObj_id() {
+<span class="fc" id="L77">        return obj_id;</span>
+    }
+
+    /**
+     * Sets the object ID.
+     *
+     * @param obj_id object ID
+     */
+    public void setObj_id(int obj_id) {
+<span class="fc" id="L86">        this.obj_id = obj_id;</span>
+<span class="fc" id="L87">    }</span>
+
+    /**
+     * Gets the mark flag.
+     *
+     * @return mark flag
+     */
+    public int getMark_flag() {
+<span class="fc" id="L95">        return mark_flag;</span>
+    }
+
+    /**
+     * Sets the mark flag.
+     *
+     * @param mark_flag mark flag
+     */
+    public void setMark_flag(int mark_flag) {
+<span class="fc" id="L104">        this.mark_flag = mark_flag;</span>
+<span class="fc" id="L105">    }</span>
+
+    /**
+     * Gets the grade ID.
+     *
+     * @return grade ID
+     */
+    public String getGrade_id() {
+<span class="fc" id="L113">        return grade_id;</span>
+    }
+
+    /**
+     * Sets the grade ID.
+     *
+     * @param grade_id grade ID
+     */
+    public void setGrade_id(String grade_id) {
+<span class="fc" id="L122">        this.grade_id = grade_id;</span>
+<span class="fc" id="L123">    }</span>
+
+    /**
+     * Gets the workspace ID.
+     *
+     * @return workspace ID
+     */
+    public int getWorkspace_id() {
+<span class="fc" id="L131">        return workspace_id;</span>
+    }
+
+    /**
+     * Sets the workspace ID.
+     *
+     * @param workspace_id workspace ID
+     */
+    public void setWorkspace_id(int workspace_id) {
+<span class="fc" id="L140">        this.workspace_id = workspace_id;</span>
+<span class="fc" id="L141">    }</span>
+
+    /**
+     * Gets the highlight value.
+     *
+     * @return highlight
+     */
+    public int getHighlight() {
+<span class="fc" id="L149">        return highlight;</span>
+    }
+
+    /**
+     * Sets the highlight value.
+     *
+     * @param highlight highlight
+     */
+    public void setHighlight(int highlight) {
+<span class="fc" id="L158">        this.highlight = highlight;</span>
+<span class="fc" id="L159">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
